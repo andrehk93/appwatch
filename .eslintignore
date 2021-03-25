@@ -1,0 +1,7 @@
+/src/main/resources/assets/legacy/*
+/src/main/resources/assets/komponentbiblioteket/*
+/src/main/resources/assets/polyfills/*.js
+/src/main/resources/lib/*
+/build/*
+/node_modules
+*.test.*

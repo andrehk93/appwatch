@@ -1,0 +1,16 @@
+@use 'colors/palette';
+
+.appwatch-header {
+    background: palette.$primary-color-medium;
+    color: white;
+    padding: 1rem 2rem;
+
+    &__container {
+        max-width: 1024px;
+        margin: 0 auto;
+
+        h1 {
+            text-align: left;
+        }
+    }
+}

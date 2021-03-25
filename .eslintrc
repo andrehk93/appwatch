@@ -1,0 +1,68 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "amd": true,
+      "jest": true
+    },
+    "globals": {
+        "Atomics": true,
+        "SharedArrayBuffer": true
+    },
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-var-requires": "off", // Can be turned on after upgrading to enonic XP v.7
+        "@typescript-eslint/no-unused-vars": "off", // Can be turned on after upgrading to enonic XP v.7
+        "react/prop-types": 0, // Mostly single components and stuff, this seems a little overkill
+        "react/no-unknown-property": 0,
+        "quotes": ["warn", "single"],
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "block-spacing": "error",
+        "no-underscore-dangle": 0,
+        "no-param-reassign": 0,
+        "no-prototype-builtins": 1,
+        "camelcase": "warn",
+        "comma-spacing": "error",
+        "key-spacing": ["error", {
+            "beforeColon": false,
+            "afterColon": true
+        }],
+        "keyword-spacing": ["error", {
+            "before": true,
+            "after": true
+        }],
+        "semi-style": ["error", "last"],
+        "space-before-blocks": "error",
+        "linebreak-style": ["error", "unix"],
+        "no-console": "warn"
+    },
+    "settings": {
+        "import/resolver":{
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        },
+        "react": {
+            "version": "detect"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<tool>
+    <display-name i18n="appwatch.displayName">Appwatch</display-name>
+    <description i18n="appwatch.description">Inspect parts and other components in applications</description>
+    <allow>
+        <principal>role:system.admin</principal>
+    </allow>
+</tool>

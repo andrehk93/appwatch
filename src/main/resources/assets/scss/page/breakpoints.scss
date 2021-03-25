@@ -1,0 +1,38 @@
+$bp-mobile: 'mobile';
+$bp-tablet-standing: 'tablet-standing';
+$bp-tablet-landscape: 'tablet-landscape';
+$bp-desktop-small: 'desktop-small';
+$bp-desktop-large: 'desktop-large';
+
+$width-mobile: 600px;
+$width-tablet-standing: 768px;
+$width-tablet-landscape: 992px;
+$width-desktop-small: 1200px;
+
+@mixin breakpoint ($size) {
+    @if ($size == $bp-mobile) {
+        @media only screen and (max-width: $width-mobile) {
+            @content
+        }
+    }
+    @if ($size == $bp-tablet-standing) {
+        @media only screen and (min-width: $width-mobile) and (max-width: $width-tablet-standing) {
+            @content
+        }
+    }
+    @if ($size == $bp-tablet-landscape) {
+        @media only screen and (min-width: $width-tablet-standing) and (max-width: $width-tablet-landscape) {
+            @content
+        }
+    }
+    @if ($size == $bp-desktop-small) {
+        @media only screen and (min-width: $width-tablet-landscape) and (max-width: $width-desktop-small) {
+            @content
+        }
+    }
+    @if ($size == $bp-desktop-large) {
+        @media only screen and (min-width: $width-desktop-small) {
+            @content
+        }
+    }
+}

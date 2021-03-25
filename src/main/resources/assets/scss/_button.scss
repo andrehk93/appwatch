@@ -1,0 +1,26 @@
+@use 'colors/palette';
+
+button.appwatch-button {
+    font-weight: 600;
+    appearance: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: palette.$primary-color-medium;
+    outline: 2px solid palette.$primary-color-medium;
+    outline-offset: -2px;
+    background: #fff;
+    border: 2px solid palette.$primary-color-medium;
+    border-radius: 2px;
+    transition: outline-offset 250ms ease;
+
+    &:hover,
+    &:focus {
+        outline-offset: -6px;
+    }
+
+    &.secondary {
+        color: white;
+        outline-color: #fff;
+        background: palette.$primary-color-medium;
+    }
+}

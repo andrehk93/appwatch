@@ -1,0 +1,32 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "outDir": "./build/resources/main",
+        "module": "commonjs",
+        "target": "ES5",
+        "strict": false,
+        "importHelpers": false,
+        "noUnusedParameters": false,
+        "noUnusedLocals": false,
+        "lib": [
+            "ES5",
+            "ES6",
+            "DOM"
+        ]
+    },
+    "include": [
+        "src/main/resources/admin/**/*.ts",
+        "src/main/resources/lib/**/*.ts",
+        "src/main/resources/services/**/*.ts",
+        "src/main/resources/site/**/*.ts",
+        "global.d.ts"
+    ],
+    "exclude": [
+        "**/node_modules/**/*",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "build/**/*",
+        "src/main/resources/site/mixin/**/*",
+        "src/main/resources/lib/types/**/*",
+    ],
+}

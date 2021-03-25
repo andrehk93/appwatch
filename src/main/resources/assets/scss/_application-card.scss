@@ -1,0 +1,71 @@
+@use "colors/palette";
+
+.appwatch-application-card {
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    color: #3d3d3d;
+    border: 0;
+    transition: box-shadow 250ms ease-in-out;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 2px 2px 8px 2px #999;
+    overflow: hidden;
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    &:hover,
+    &:focus {
+        outline: none;
+        box-shadow: 4px 4px 8px 4px #999;
+        p {
+            text-decoration: underline palette.$secondary-color-medium;
+        }
+        .appwatch-application-card__bottom-skewed {
+            border-color: palette.$secondary-color-light;
+        }
+    }
+
+    &__icon {
+        height: 64px;
+        width: auto;
+        padding: 1rem;
+    }
+
+    &__top {
+        background: white;
+    }
+
+    &__bottom-skewed {
+        border-top: 6px solid transparent;
+        background: inherit;
+        position: relative;
+        background: palette.$primary-color-medium;
+        transform: skew(0deg, -8deg);
+        color: white;
+        margin-top: 4rem;
+        padding: 4rem 2rem;
+        div {
+            transform: skew(0deg, 8deg);
+        }
+
+        transition: border-color 250ms ease;
+
+        &::after {
+            content: '';
+            background: inherit;
+            position: absolute;
+            top: calc(100% - 1px);
+            bottom: -2.5rem;
+            right: 0;
+            left: 0;
+        }
+    }
+
+    h3 {
+        margin: 0.25rem 0;
+        color: palette.$secondary-color-light;
+    }
+}

@@ -1,0 +1,12 @@
+@use 'typography';
+@use 'page';
+@use 'grid/grid';
+
+@use 'button';
+@use 'header';
+@use 'application-card';
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}

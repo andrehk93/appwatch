@@ -1,0 +1,41 @@
+{
+  "plugins": ["stylelint-selector-bem-pattern"],
+  "extends": ["stylelint-config-prettier"],
+  "rules": {
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    },
+    "declaration-property-value-disallowed-list": {
+      "border": ["none"],
+      "border-top": ["none"],
+      "border-right": ["none"],
+      "border-bottom": ["none"],
+      "border-left": ["none"]
+    },
+    "max-nesting-depth": 5,
+    "no-duplicate-selectors": true,
+    "block-no-empty": true,
+    "at-rule-empty-line-before": [
+      "never",
+      {
+        "ignoreAtRules": ["import", "first-nested"]
+      }
+    ],
+    "at-rule-name-case": "lower",
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "color-no-invalid-hex": true,
+    "value-no-vendor-prefix": true,
+    "shorthand-property-no-redundant-values": true,
+    "comment-whitespace-inside": "always",
+    "length-zero-no-unit": true,
+    "number-no-trailing-zeros": true,
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-block-no-duplicate-properties": true
+  }
+}

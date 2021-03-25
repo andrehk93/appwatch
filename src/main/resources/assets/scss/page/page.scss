@@ -1,0 +1,21 @@
+@use 'breakpoints' as b;
+
+.appwatch-page {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include b.breakpoint(b.$bp-mobile) {
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+    @include b.breakpoint(b.$bp-tablet-standing) {
+        max-width: 100%;
+        padding: 2rem 2rem;
+    }
+    @include b.breakpoint(b.$bp-tablet-landscape) {
+        max-width: 100%;
+        padding: 2rem 4rem;
+    }
+}
